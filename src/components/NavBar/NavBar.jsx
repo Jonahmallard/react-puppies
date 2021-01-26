@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
-import * as userService from '../../utilities/users-service';
+import * as userService from '../../services/users-service';
 
 
 export default function NavBar({ user, setUser }) {
@@ -12,9 +12,9 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <NavLink exact style={{textDecoration: 'none', color: 'black'}} to="/orders">Order History</NavLink>
+      <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/'>PUPPIES LIST</NavLink>
       &nbsp; | &nbsp;
-      <NavLink exact style={{textDecoration: 'none', color: 'black'}} to="/orders/new">New Order</NavLink>
+      <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/add'>ADD PUPPY</NavLink>
       &nbsp;&nbsp;
       <span>Welcome, <strong>{user.name}</strong></span>
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut} style={{textDecoration: 'none', color: 'black'}}>Log Out</Link>

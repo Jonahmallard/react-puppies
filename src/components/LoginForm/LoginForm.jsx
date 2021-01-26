@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as usersService from '../../utilities/users-service';
+import * as usersService from '../../services/users-service';
 
 export default function LogIn({ setUser }) {
   const [credentials, setCredentials] = useState({
